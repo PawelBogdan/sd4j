@@ -425,7 +425,7 @@ public final class SD4J implements AutoCloseable {
                         throw new IllegalStateException("Failed to construct session options", e);
                     }
                 };
-                case CPU -> cpuSupplier;
+                default-> cpuSupplier;
             };
             // Always run the embedders & safety checker on CPU to save accelerator memory.
             TextEmbedder embedder = new TextEmbedder(tokenizerPath, encoderPath, cpuSupplier.get(), config.type.textDimSize, false);

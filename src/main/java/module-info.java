@@ -47,6 +47,7 @@ module com.oracle.labs.mlrg.sd4j {
     requires java.desktop;
     requires com.microsoft.onnxruntime;
     requires org.apache.commons.math4.legacy;
+    requires com.microsoft.onnxruntime.extensions;
 
     exports com.oracle.labs.mlrg.sd4j;
 }
